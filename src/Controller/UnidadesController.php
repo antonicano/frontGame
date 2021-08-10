@@ -27,8 +27,8 @@ class UnidadesController extends AbstractController
             $units[] = $ar;
         }
 
-        return $this->json([
+        return $this->json(
             $units
-        ]);
+        );
     }
 }
