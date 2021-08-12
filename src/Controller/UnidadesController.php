@@ -7,6 +7,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Unidades;
+use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
 
 class UnidadesController extends AbstractController
 {
@@ -26,7 +28,7 @@ class UnidadesController extends AbstractController
 
             $units[] = $ar;
         }
-
+        
         return $this->json(
             $units
         );
